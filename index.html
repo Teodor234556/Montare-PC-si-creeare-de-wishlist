@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ro" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicii Configurare PC și Wishlist</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    body {
+      margin: 0; padding: 0;
+      min-height: 100vh;
+      font-family: 'Orbitron', sans-serif;
+      color: #00ffea;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .logo {
+      margin-top: 30px;
+      width: 100px;
+      height: 100px;
+      filter: drop-shadow(0 0 5px #00ffea);
+      animation: neonGlow 3s ease-in-out infinite alternate;
+      user-select: none;
+    }
+
+    @keyframes neonGlow {
+      0% {
+        filter: drop-shadow(0 0 5px #00ffea) drop-shadow(0 0 20px #00ffea);
+      }
+      100% {
+        filter: drop-shadow(0 0 15px #00fff0) drop-shadow(0 0 40px #00fff0);
+      }
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 20px 0 20px 0;
+      color: #00ffea;
+      text-shadow:
+        0 0 5px #00ffe7,
+        0 0 10px #00ffe7,
+        0 0 20px #00ffe7,
+        0 0 40px #00ffe7,
+        0 0 80px #00ffe7;
+      animation: neonPulse 2.5s ease-in-out infinite alternate;
+      user-select: none;
+      text-align: center;
+    }
+
+    @keyframes neonPulse {
+      from {
+        text-shadow:
+          0 0 5px #00ffe7,
+          0 0 10px #00ffe7,
+          0 0 20px #00ffe7,
+          0 0 40px #00ffe7,
+          0 0 80px #00ffe7;
+        color: #00ffea;
+      }
+      to {
+        text-shadow:
+          0 0 10px #00fff0,
+          0 0 20px #00fff0,
+          0 0 40px #00fff0,
+          0 0 80px #00fff0,
+          0 0 120px #00fff0;
+        color: #00fff0;
+      }
+    }
+
+    .prices {
+      background: rgba(0, 255, 234, 0.1);
+      border: 2px solid #00ffea;
+      border-radius: 15px;
+      box-shadow:
+        0 0 20px #00ffea,
+        inset 0 0 40px #00ffea;
+      padding: 30px 40px;
+      max-width: 420px;
+      width: 90%;
+      margin-bottom: 25px;
+      transition: box-shadow 0.4s ease;
+      backdrop-filter: blur(6px);
+      user-select: none;
+    }
+    .prices:hover {
+      box-shadow:
+        0 0 30px #00fff0,
+        inset 0 0 50px #00fff0;
+    }
+    .prices h2 {
+      margin-top: 0;
+      color: #00fff0;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #00ffea;
+      padding-bottom: 10px;
+      text-align: center;
+      user-select: none;
+    }
+    .price-item {
+      margin: 15px 0;
+      font-weight: 600;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      color: #00ffd7;
+      text-shadow: 0 0 5px #00ffd7;
+    }
+
+    .btn-contact {
+      display: inline-block;
+      margin: 10px auto 50px auto;
+      padding: 15px 40px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #00ffea;
+      background: transparent;
+      border: 3px solid #00ffea;
+      border-radius: 40px;
+      cursor: pointer;
+      text-align: center;
+      text-shadow:
+        0 0 5px #00ffe7,
+        0 0 10px #00ffe7,
+        0 0 20px #00ffe7;
+      box-shadow:
+        0 0 10px #00ffea;
+      transition: all 0.3s ease;
+      user-select: none;
+      animation: neonPulse 2.5s ease-in-out infinite alternate;
+    }
+    .btn-contact:hover,
+    .btn-contact:focus {
+      color: #00fff0;
+      border-color: #00fff0;
+      box-shadow:
+        0 0 15px #00fff0,
+        0 0 25px #00fff0,
+        0 0 40px #00fff0;
+      outline: none;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .prices {
+        max-width: 95%;
+        padding: 20px 25px;
+      }
+      .price-item {
+        font-size: 1rem;
+      }
+      .logo {
+        width: 80px;
+        height: 80px;
+      }
+      .btn-contact {
+        font-size: 1.1rem;
+        padding: 12px 30px;
+        margin-bottom: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <svg class="logo" aria-label="Logo Servicii PC" role="img" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="45" stroke="#00ffea" stroke-width="5" />
+    <path d="M30 55 L45 30 L60 55 L75 30" stroke="#00ffea" stroke-width="5" stroke-linecap="round" />
+    <circle cx="50" cy="65" r="7" fill="#00ffea" />
+  </svg>
+
+  <h1>Wishlist și Montare Componente PC</h1>
+
+  <div class="prices" role="region" aria-labelledby="tarife">
+    <h2 id="tarife">Tarife servicii</h2>
+    <div class="price-item"><span>Creare wishlist</span><span>50 - 100 lei</span></div>
+    <div class="price-item"><span>Montare componente PC</span><span>200 - 300 lei</span></div>
+    <div class="price-item"><span>Ambele servicii (wishlist + montare)</span><span>450 lei</span></div>
+  </div>
+
+  <button class="btn-contact" aria-label="Contactează serviciul pentru mai multe informații" 
+          onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSce05ujKeX_gZdxGJp06l9JV6LWpjEjzVKCvy4UGyWl2RX-dA/viewform', '_blank')">
+    Contactează-ne
+  </button>
+
+</body>
+</html>
